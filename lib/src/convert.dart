@@ -1280,7 +1280,7 @@ abstract class _ChunkedJsonParser<T> {
           // Is 1 if digit is 8 or 9 and sign == 0, or digit is 9 and sign < 0;
           int highDigit = digit >> 3;
           if (sign < 0) highDigit &= digit;
-          if (digitCount == 19 || intValue - highDigit < -922337203685477580) {
+          if (digitCount == 19 || intValue - highDigit < -922337203685477632) {
             isDouble = true;
             // Big value that we know is not trusted to be exact later,
             // forcing reparsing using `double.parse`.
